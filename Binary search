@@ -60,76 +60,16 @@ int main() {
     return 0;
 }
 algo
-int binarySearch(int arr[], int n, int key) {
-
- int low = 0, high = n - 1, mid;
-
- while (low <= high) {
-
- mid = (low + high) / 2;
-
- if (arr[mid] == key) {
-
- return mid; 
-
- } else if (arr[mid] < key) {
-
- low = mid + 1; 
-
- } else 
-
- high = mid - 1; 
-
- } return -1; 
-
-}
-
-void printArray(int arr[], int n) {
-
- for (int i = 0; i < n; i++)
-
- printf("%d ", arr[i]);
-
- printf("\n");
-
-}
-
-int main() {
-
- int n, key;
-
- printf("Enter number of elements: ");
-
- scanf("%d", &n);
-
- int arr[n];
-
- printf("Enter %d elements in sorted order:\n", n);
-
- for (int i = 0; i < n; i++) {
-
- scanf("%d", &arr[i]);
-
- } printf("Enter element to search: ");
-
- scanf("%d", &key);
-
- printf("\nArray Elements:\n");
-
- printArray(arr, n);
-
- int result = binarySearch(arr, n, key);
-
- if (result != -1)
-
- printf("\nElement %d found at position %d (0-
-
-based index).\n", key, result);
-
- else
-
- printf("\nElement %d not found in the array.\n", 
-
-key);
-
- return 0;}
+orithm:
+1. BinarySearch(A, key)
+2. low = 0
+3. high = A.length - 1
+4. while low ≤ high
+5. mid = floor((low + high) / 2)
+6. if A[mid] == key
+7. return mid // key found at index mid
+8. else if A[mid] < key
+9. low = mid + 1
+10. else
+11. high = mid - 1
+12. return -1 // key not found
